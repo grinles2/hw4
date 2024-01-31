@@ -1,7 +1,7 @@
 import random
 #Библиотеки
-class crocodile:
-    def __init__(self,name, hunger, alive, sat, owner, toilet, glad, activity, sleep):
+class Crocodile:
+    def __init__(self, name):
         self.hunger = 0
         self.sat = 0
         self.name = name
@@ -77,8 +77,8 @@ class crocodile:
         elif live_cube == 6:
             self.to_walk()
         self.end_of_the_day()
-        self.is_alive()
-toothless = crocodile("Toothless")
+        self.alive()
+toothless = Crocodile("Toothless")
 for day in range(1, 366):
     if toothless.alive == False:
         break
