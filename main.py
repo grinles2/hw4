@@ -29,6 +29,10 @@ class Crocodile:
         self.sat -= 10
         self.sleep += 1
 
+    def is_alive(self):
+        if self.glad > 5:
+            self.alive = True
+
     def to_toilet(self):
         self.toilet -= 1
         self.glad += 2
@@ -67,7 +71,7 @@ class Crocodile:
         if live_cube == 1:
             self.to_eat()
         elif live_cube == 2:
-            self.to_sleep()
+            self.sleep()
         elif live_cube == 3:
             self.no_activity()
         elif live_cube == 4:
@@ -77,9 +81,9 @@ class Crocodile:
         elif live_cube == 6:
             self.to_walk()
         self.end_of_the_day()
-        self.alive()
+        self.is_alive()
 toothless = Crocodile("Toothless")
 for day in range(1, 366):
-    if toothless.alive == False:
+    if toothless.is_alive == False:
         break
-    toothless.live(day)
+    toothless.is_alive()
