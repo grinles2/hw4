@@ -86,4 +86,4 @@ toothless = Crocodile("Toothless")
 for day in range(1, 366):
     if toothless.is_alive == False:
         break
-    toothless.is_alive()
+    toothless.is_alive(day)
